@@ -2,10 +2,13 @@ package com.nerdy.geek.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.nerdy.geek.enums.Roles;
 
 import lombok.Data;
 
@@ -28,5 +31,9 @@ public class UserEntity extends BaseEntity {
 
 	@Column(name = "last_name")
 	private String lastName;
+	
+	// learn about @enumerated annotation
+	@Column(nullable=false)
+	private Roles role;
 
 }
