@@ -14,11 +14,11 @@ public class UserDTO extends BaseDTO {
 	public String email;
 	public Roles role;
 	
-	UserDTO(UserEntity userEntity) {
+	public UserDTO(UserEntity userEntity) {
 		setId(userEntity.getId());
 		setFirstName(userEntity.getFirstNames());
 		setLastName(userEntity.getLastName());
 		setEmail(userEntity.getEmail());
-		setRole(userEntity.getRoles());
+		setRole(userEntity.getRole());
 	}
 }

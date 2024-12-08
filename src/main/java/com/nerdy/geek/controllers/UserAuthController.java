@@ -25,10 +25,9 @@ public class UserAuthController extends BaseController {
 		UserEntity userEntity = databaseService.findUserById(userId);
 		if (Objects.nonNull(userEntity)) {
 			UserDTO user = new UserDTO(userEntity);
-			return new ResponseEntity(new ApiResponseDTO<UserDTO>(new UserDTO()), HttpStatus.OK);
+			return new ResponseEntity(new ApiResponseDTO<UserDTO>(user, HttpStatus.OK, "User Fetched Successfully!!", true), HttpStatus.OK);
 		}
 		return null;
 	}
 
 }
-S

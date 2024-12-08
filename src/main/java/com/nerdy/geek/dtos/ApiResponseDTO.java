@@ -14,7 +14,7 @@ public class ApiResponseDTO<T> {
 	public T body;
 	public String message;
 
-	ApiResponseDTO(T t, HttpStatus status, String msg, boolean success) {
+	public ApiResponseDTO(T t, HttpStatus status, String msg, boolean success) {
 		setStatus(status);
 		setBody(t);
 		setMessage(msg);
