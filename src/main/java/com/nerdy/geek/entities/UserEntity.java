@@ -10,6 +10,7 @@ import javax.persistence.Table;
 import com.nerdy.geek.enums.Roles;
 
 import lombok.Data;
+import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "users")
